@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<input value="1" id="good" type="range" min="1"max="100"onclick="cl1()">good<br/>
+<input  value="1" id="cheap" type="range" min="1"max="2"onclick="cl2()" >cheap<br/>
+<input value="1" id="fast" type="range" min="1"max="2" onclick="cl3()">fast<br/>
+</body>
+</html>
+<script>
+    let count1=0;
+    let count2=0;
+    let count3=0;
+
+    function cl1(){
+        if (count1==0) {
+            document.getElementById('good').value ='100';
+            count1++;
+            document.getElementById('fast').value='1';
+        }
+        else {
+            document.getElementById('good').value='1';
+            count1--;
+        }
+    }
+    function cl2() {
+        if (count2==0){
+            document.getElementById('cheap').value='2';
+            count2++;
+            document.getElementById('good').value='1';
+        }
+        else {
+            document.getElementById('cheap').value='1';
+            count2--;
+        }
+    }
+    function cl3() {
+        if (count3==0){
+            document.getElementById('fast').value='2';
+            count3++;
+            document.getElementById('good').value='1';
+        }
+        else {
+            document.getElementById('fast').value='1';
+            count3--;
+        }
+    }
+</script>
